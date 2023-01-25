@@ -9,17 +9,18 @@
   background-image: url("images/main.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 900px;
 
   .dashboard-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    min-height: 100px;
     border-bottom: 1px solid rgba(161, 161, 161, 0.5);
 
-    .empty-left {
-      width: 600px;
+    a {
+      color: white;
+      text-decoration: none;
     }
 
     .container-menu {
@@ -43,7 +44,7 @@
   }
 
   .container-content {
-    height: 70%;
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,89 +84,125 @@
   .title {
     font-size: 36px;
     text-align: center;
-    margin-top: 5%;
-    width: 50%;
+    margin: 110px 0 50px 0;
+    font-weight: 700;
+    width: 740px;
   }
 
   .description {
-    width: 50%;
+    width: 730px;
     text-align: center;
     color: #999999;
     font-size: 16px;
-
-
+    margin-bottom: 70px;
   }
 
-  .container-content {
+  .content-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
 
-    .content-web {
-      width: 30%;
-    }
 
-    .img-logo {
+    img {
+      min-height: 110px;
+      min-width: 110px;
       width: 110px;
       height: 110px;
     }
 
-    .content-text {
-      width: 100%;
-      margin-top: 20px;
-      margin-left: 10px;
-    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      margin-left: 18px;
 
-    .title {
-      font-size: 18px;
-      font-weight: 600;
-      text-align: start;
-    }
+      h3 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0;
+        text-align: start;
+        width: 220px;
+      }
 
-    .description {
-      text-align: start;
-      width: 100%;
+      p {
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #999999;
+        width: 220px;
+      }
     }
   }
-
 }
 
 .company-description {
-  background-color: #F6F6F8;
-  width: 100%;
-  padding: 100px 0 100px 0;
+  min-height: 800px;
+  background: #F6F6F8;
 
-  .container-content-company {
+  .container {
+    margin-top: 100px;
+    padding-bottom: 90px;
+    border-bottom: 1px solid #E0E0E0;;
 
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 53px;
+        margin: 0 0 40px 0;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #999999;
+        margin: 0 0 30px 0;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 
-  .content-text {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-bottom: 1px solid #E0E0E0;
-  }
+  .row-container {
+    .container {
+      padding: 0 70px 70px 70px;
 
-  .img {
-    border-bottom: 1px solid #E0E0E0;
-    padding-bottom: 100px;
-  }
+      .top {
+        display: flex;
+        align-items: center;
 
-  .title {
-    font-size: 36px;
-    font-weight: 700;
-    width: 80%;
-  }
+        img {
+          width: 30px;
+          height: 30px;
+        }
 
-  .description {
-    font-weight: 400;
-    font-size: 16px;
-    color: #999999;
-    width: 80%;
-  }
+        p {
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 53px;
+          margin: 0 0 0 20px;
+          color: #000000;
+        }
+      }
 
-  .link {
-    text-decoration: underline;
-    color: #4985FF;
-    cursor: pointer;
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #999999;
+      }
+    }
   }
 }
 
@@ -194,97 +231,73 @@
 }
 
 .container-specialization {
-  width: 100%;
-  height: 900px;
-  position: relative;
+  min-height: 980px;
+  background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
 
-  .purple {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 500px;
-    width: 100%;
-    background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
-    margin-right: 333px;
-  }
-
-  .top-side {
-    position: relative;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+  .container {
+    margin-top: 100px;
 
     h2 {
       font-weight: 700;
       font-size: 36px;
       line-height: 53px;
       color: #FFFFFF;
-      width: 30%;
-      margin-right: 20%;
+      width: 540px;
     }
 
-    button {
-      margin: 0 10% 0 0;
-
+    .btn-main {
+      margin: 0;
     }
   }
 
-  .bottom-side {
-    position: relative;
+  .bottom {
+    margin-top: 60px;
     border-bottom: 1px solid #E0E0E0;
-    padding-bottom: 3%;
-
-    .content-team {
-      width: 350px;
-      margin-right: 5%;
-    }
+    padding-bottom: 85px;
 
     h3 {
       font-weight: 600;
       font-size: 18px;
       line-height: 22px;
-      margin-top: 5%;
+      margin-top: 30px;
 
       span {
         color: #4985FF;
       }
     }
 
-    .description {
-      color: #999999;
+    p {
       font-weight: 400;
       font-size: 16px;
       line-height: 25px;
-      margin-top: 5%;
+      color: #999999;
+      margin-top: 30px;
     }
 
-    .more {
+    a {
       text-decoration: underline;
-      color: #4985FF;
-      cursor: pointer;
     }
   }
 }
 
 .projects-container {
-  width: 100%;
-  min-height: 776px;
-  background-color: #F6F6F8;
+  height: 780px;
+  background: #F6F6F8;
+  text-align: center;
 
   h2 {
     font-weight: 700;
     font-size: 36px;
     line-height: 53px;
-    text-align: center;
+    color: #000000;
   }
 
   p {
-    width: 50%;
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
-    text-align: center;
     color: #999999;
+    margin: 50px 0 70px 0;
   }
 }
 
@@ -304,7 +317,12 @@
     color: #FFFFFF;
 
     .video {
-      margin-top: 50px;
+      margin-top: 70px;
+
+      iframe {
+        width: 970px;
+        height: 430px;
+      }
     }
 
     h2 {
@@ -312,7 +330,7 @@
       font-size: 36px;
       line-height: 53px;
       text-align: center;
-      padding-top: 5%;
+      margin-top: 70px;
     }
 
     p {
@@ -320,12 +338,12 @@
       font-size: 16px;
       line-height: 25px;
       text-align: center;
-      padding-top: 3%;
+      margin-top: 30px;
     }
   }
 
   .line {
-    height: 50px;
+    height: 85px;
     width: 50%;
     border-bottom: 1px solid #E0E0E0;
   }
@@ -337,7 +355,7 @@
     justify-content: flex-start;
     position: relative;
     min-height: 300px;
-    margin-top: 100px;
+    margin-top: 85px;
 
     h3 {
       font-weight: 600;
@@ -353,18 +371,22 @@
       text-align: center;
       color: #999999;
       margin-top: 20px ;
+      margin-bottom: 30px;
     }
 
     .input-email {
       display: flex;
       align-items: center;
+      min-width: 500px;
+      min-height: 55px;
+      padding: 0 10px 0 10px;
 
       input {
         border: 1px solid #F2F2F2;
         box-shadow: 0 0 10px rgba(111, 111, 111, 0.25);
         border-radius: 30px 0 0 30px;
         min-height: 45px;
-        min-width: 500px;
+        min-width: 350px;
         padding-left: 30px;
       }
 
@@ -377,40 +399,54 @@
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
         min-height: 45px;
-        box-shadow: 0 0 10px rgba(111, 111, 111, 0.25);
+        width: 150px;
+        //box-shadow: 0 0 10px rgba(111, 111, 111, 0.25);
       }
     }
   }
 }
 
-.footer {
-  width: 100%;
+footer {
   min-height: 415px;
   background: #F6F6F8;
 
-  .container-info {
-    margin-top: 20px;
-  }
-
-  .permission {
+  p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
     color: #999999;
-    width: 100%;
-    display: flex;
-    justify-content: center;
     margin-top: 30px;
   }
 
-  .line {
-    width: 70%;
-    height: 1px;
-    border: 1px solid #E0E0E0;
-    margin-top: 50px;
+
+  .container {
+    margin-top: 40px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #E0E0E0;
   }
 
-  p {
-    margin: 0 0 0 10px;
+  .row {
+    margin-top: 30px;
+  }
+
+  .contacts {
+    height: 155px;
+  }
+
+  a {
+    margin-left: 17px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
     color: #999999;
-    cursor: pointer;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
   }
 }
 
