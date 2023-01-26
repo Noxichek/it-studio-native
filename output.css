@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: montserat, serif;
-  overflow-x: hidden;
 }
 
 .preview-container {
@@ -36,7 +35,7 @@
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 .preview-container .container-content {
-  height: 800px;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +56,7 @@
 
 .btn-main {
   width: 200px;
-  height: 45px;
+  min-height: 45px;
   background: #4985FF;
   box-shadow: 0 0 10px rgba(111, 111, 111, 0.25);
   border-radius: 30px;
@@ -68,16 +67,18 @@
 }
 
 .description-container {
-  margin-bottom: 5%;
+  margin-bottom: 110px;
 }
 .description-container .title {
   font-size: 36px;
   text-align: center;
   margin: 110px 0 50px 0;
   font-weight: 700;
+  min-width: 740px;
   width: 740px;
 }
 .description-container .description {
+  min-width: 730px;
   width: 730px;
   text-align: center;
   color: #999999;
@@ -88,7 +89,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  min-height: 150px;
 }
 .description-container .content-row img {
   min-height: 110px;
@@ -109,7 +110,7 @@
   line-height: 22px;
   margin: 0;
   text-align: start;
-  width: 220px;
+  min-width: 220px;
 }
 .description-container .content-row .text p {
   margin: 0;
@@ -117,7 +118,7 @@
   font-size: 14px;
   line-height: 22px;
   color: #999999;
-  width: 220px;
+  min-width: 220px;
 }
 
 .company-description {
@@ -175,26 +176,6 @@
   color: #999999;
 }
 
-.projects-grid {
-  margin-top: 5%;
-}
-.projects-grid .logo-img {
-  width: 30px;
-  height: 30px;
-}
-.projects-grid .text-content {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 53px;
-  margin: 0;
-}
-.projects-grid .our-projects {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 25px;
-  color: #999999;
-}
-
 .container-specialization {
   min-height: 980px;
   background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
@@ -238,7 +219,7 @@
 }
 
 .projects-container {
-  height: 780px;
+  min-height: 780px;
   background: #F6F6F8;
   text-align: center;
 }
@@ -275,8 +256,8 @@
   margin-top: 70px;
 }
 .video-container .container-top .video iframe {
-  width: 970px;
-  height: 430px;
+  min-width: 970px;
+  min-height: 430px;
 }
 .video-container .container-top h2 {
   font-weight: 700;
@@ -294,7 +275,7 @@
 }
 .video-container .line {
   height: 85px;
-  width: 50%;
+  min-width: 970px;
   border-bottom: 1px solid #E0E0E0;
 }
 .video-container .container-bottom {
@@ -350,6 +331,7 @@
 footer {
   min-height: 415px;
   background: #F6F6F8;
+  padding-bottom: 30px;
 }
 footer p {
   font-weight: 400;
@@ -357,31 +339,30 @@ footer p {
   line-height: 21px;
   text-align: center;
   color: #999999;
-  margin-top: 30px;
+  margin: 30px 0 0;
 }
 footer .container {
-  margin-top: 40px;
-  padding-bottom: 70px;
+  padding: 70px 0 70px;
   border-bottom: 1px solid #E0E0E0;
 }
-footer .row {
-  margin-top: 30px;
+footer .container .col-3 {
+  padding: 0;
 }
-footer .contacts {
-  height: 155px;
+footer .container .col-3 h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 35px;
 }
-footer a {
-  margin-left: 17px;
+footer .container .col-3 a {
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: #999999;
+  margin-left: 15px;
 }
-footer h3 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-  color: #000000;
+footer .container .col-3 .text {
+  margin-top: 30px;
 }
 
 @font-face {
