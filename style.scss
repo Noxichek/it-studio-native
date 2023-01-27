@@ -424,6 +424,46 @@ footer {
   }
 }
 
+@media (max-width: 400px) {
+  .preview-container {
+    .container-content {
+      .title {
+        font-size: 20px;
+        width: 370px;
+      }
+    }
+  }
+
+  .description-container {
+    .title {
+      font-size: 20px;
+      min-width: 300px;
+      width: 370px;
+      margin: 50px 0 50px;
+    }
+
+    .description {
+      min-width: 300px;
+      width: 360px;
+      margin: 0;
+    }
+  }
+
+  .company-description {
+    .container {
+      padding: 20px 20px;
+    }
+    img {
+      width: 340px;
+      height: 340px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
 @font-face {
   font-family: 'montserat';
   src: url("./fonts/Montserrat-VariableFont_wght.ttf");
