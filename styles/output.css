@@ -5,7 +5,7 @@
 }
 
 .preview-container {
-  background-image: url("images/main.png");
+  background-image: url("../images/main.png");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 900px;
@@ -74,12 +74,8 @@
   text-align: center;
   margin: 110px 0 50px 0;
   font-weight: 700;
-  min-width: 740px;
-  width: 740px;
 }
 .description-container .description {
-  min-width: 730px;
-  width: 730px;
   text-align: center;
   color: #999999;
   font-size: 16px;
@@ -124,6 +120,7 @@
 .company-description {
   min-height: 800px;
   background: #F6F6F8;
+  padding-bottom: 100px;
 }
 .company-description .container {
   margin-top: 100px;
@@ -179,9 +176,6 @@
 .container-specialization {
   min-height: 980px;
   background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
-}
-.container-specialization .container {
-  margin-top: 100px;
 }
 .container-specialization .container h2 {
   font-weight: 700;
@@ -249,15 +243,11 @@
   align-items: center;
   width: 100%;
   min-height: 570px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), no-repeat url("images/5.png");
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), no-repeat url("../images/5.png");
   color: #FFFFFF;
 }
 .video-container .container-top .video {
   margin-top: 70px;
-}
-.video-container .container-top .video iframe {
-  min-width: 970px;
-  min-height: 430px;
 }
 .video-container .container-top h2 {
   font-weight: 700;
@@ -275,7 +265,6 @@
 }
 .video-container .line {
   height: 85px;
-  min-width: 970px;
   border-bottom: 1px solid #E0E0E0;
 }
 .video-container .container-bottom {
@@ -329,9 +318,7 @@
 }
 
 footer {
-  min-height: 415px;
   background: #F6F6F8;
-  padding-bottom: 30px;
 }
 footer p {
   font-weight: 400;
@@ -342,59 +329,99 @@ footer p {
   margin: 30px 0 0;
 }
 footer .container {
-  padding: 70px 0 70px;
   border-bottom: 1px solid #E0E0E0;
 }
-footer .container .col-3 {
+footer .container .col-lg-3 {
   padding: 0;
 }
-footer .container .col-3 h3 {
+footer .container .col-lg-3 h3 {
   font-weight: 600;
-  font-size: 18px;
   line-height: 22px;
-  margin-bottom: 35px;
 }
-footer .container .col-3 a {
+footer .container .col-lg-3 a {
   font-weight: 400;
-  font-size: 14px;
   line-height: 22px;
   color: #999999;
   margin-left: 15px;
 }
-footer .container .col-3 .text {
-  margin-top: 30px;
-}
 
-@media (max-width: 400px) {
-  .preview-container .container-content .title {
+@media screen and (min-width: 576px) {
+  .preview-container .title {
     font-size: 20px;
-    width: 370px;
   }
   .description-container .title {
     font-size: 20px;
-    min-width: 300px;
-    width: 370px;
     margin: 50px 0 50px;
   }
-  .description-container .description {
-    min-width: 300px;
-    width: 360px;
-    margin: 0;
-  }
   .company-description .container {
-    padding: 20px 20px;
+    padding: 20px;
   }
   .company-description img {
     width: 340px;
     height: 340px;
   }
-  .company-description h2 {
-    text-align: center;
+  .container-specialization img {
+    width: 160px;
+  }
+  .projects-container img {
+    margin-bottom: 10px;
+  }
+  .projects-container button {
+    margin: 50px 0;
+  }
+  .video-container .line {
+    width: 576px;
+  }
+  iframe {
+    width: 400px;
+  }
+  footer {
+    padding: 20px;
+  }
+  footer h3 {
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  footer a {
+    font-size: 10px;
+  }
+  footer .text {
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container-specialization img {
+    width: 350px;
+    height: 300px;
+  }
+  iframe {
+    width: 970px;
+    height: 430px;
+  }
+  .video-container .line {
+    min-width: 970px;
+  }
+  footer {
+    padding-bottom: 30px;
+    min-height: 415px;
+  }
+  footer .container {
+    padding: 70px 0 70px;
+  }
+  footer h3 {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+  footer a {
+    font-size: 14px;
+  }
+  footer .text {
+    margin: 30px 0 0;
   }
 }
 @font-face {
   font-family: "montserat";
-  src: url("./fonts/Montserrat-VariableFont_wght.ttf");
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 /*# sourceMappingURL=output.css.map */
