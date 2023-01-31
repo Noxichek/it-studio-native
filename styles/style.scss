@@ -12,7 +12,6 @@
   background-image: url("../images/main.png");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 900px;
 
   nav {
     background: transparent !important;
@@ -38,7 +37,7 @@
   }
 
   .container-content {
-    min-height: 800px;
+    //min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,7 +50,6 @@
     }
 
     .title {
-      font-size: 48px;
       width: 800px;
       text-align: center;
       font-weight: 800;
@@ -408,7 +406,70 @@ footer {
   }
 }
 
+@media screen and (min-width: 0px){
+  .disabled-navbar {
+    display: none !important;
+  }
+
+  .navbar {
+    .container-fluid {
+      a {
+        color: black !important;
+      }
+    }
+  }
+
+  .description-container {
+    .btn-main {
+      margin: 20px 0;
+    }
+
+    .description {
+      margin-bottom: 20px;
+    }
+
+    .title {
+      margin: 30px;
+    }
+  }
+
+  .preview-container {
+      height: 500px;
+
+    .container-content {
+      justify-content: space-around;
+      height: 440px;
+
+      .title {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .company-description {
+
+    .container {
+      .title {
+        font-size: 32px !important;
+      }
+
+      padding-bottom: 30px;
+    }
+    .title {
+      margin-top: 20px !important;
+    }
+
+    img {
+      width: 300px;
+    }
+  }
+}
+
 @media screen and (min-width: $sm-screen) {
+  .disabled-navbar {
+    display: none !important;
+  }
+
   .preview-container {
       .title {
         font-size: 20px;
@@ -416,6 +477,10 @@ footer {
     nav {
       .navbar-toggler {
         background: white;
+      }
+
+      a {
+        color: black !important;
       }
     }
   }
@@ -525,6 +590,17 @@ footer {
 
 @media  screen and (min-width: $md-screen) {
     .preview-container {
+      min-height: 900px;
+
+      .container-content {
+        justify-content: center;
+        height: 800px;
+
+        .title {
+          font-size: 48px;
+        }
+      }
+
       nav {
         .navbar-toggler {
           background: azure;
@@ -542,6 +618,26 @@ footer {
 }
 
 @media screen and (min-width: $lg-screen){
+
+  .disabled-navbar-mobile {
+    display: none !important;
+  }
+
+  .navbar {
+    .container-fluid {
+      a {
+        color: white !important;
+      }
+    }
+  }
+
+  .disabled-navbar {
+    display: block !important;
+  }
+
+  .preview-container {
+    min-height: 900px;
+  }
 
   .company-description {
     min-height: 800px;
@@ -623,6 +719,23 @@ footer {
 }
 
 @media screen and (min-width: $xl-screen) {
+  .disabled-navbar-mobile {
+    display: none !important;
+  }
+
+  .preview-container {
+    min-height: 900px;
+
+    .container-content {
+      justify-content: center;
+      height: 800px;
+
+      .title {
+        font-size: 48px;
+      }
+    }
+  }
+
     .container-specialization {
       background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
 
