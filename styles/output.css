@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "montserat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   font-family: montserat, serif;
 }
 
@@ -10,14 +15,10 @@
   background-repeat: no-repeat;
   min-height: 900px;
 }
-.preview-container .dashboard-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100px;
-  border-bottom: 1px solid rgba(161, 161, 161, 0.5);
+.preview-container nav {
+  background: transparent !important;
 }
-.preview-container .dashboard-container .container-menu a {
+.preview-container nav .container-fluid a {
   display: inline-block;
   color: white;
   text-decoration: none;
@@ -25,13 +26,11 @@
   text-align: center;
   transition: border-bottom-color 0.5s;
   border-bottom: 2px solid transparent;
-  vertical-align: middle;
-  line-height: 100px;
 }
-.preview-container .dashboard-container .container-menu a:hover {
+.preview-container nav .container-fluid a:hover {
   border-bottom: 2px solid rgb(255, 255, 255);
 }
-.preview-container .dashboard-container .container-menu .active {
+.preview-container nav .container-fluid .active-link {
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 .preview-container .container-content {
@@ -66,9 +65,6 @@
   cursor: pointer;
 }
 
-.description-container {
-  margin-bottom: 110px;
-}
 .description-container .title {
   font-size: 36px;
   text-align: center;
@@ -118,12 +114,9 @@
 }
 
 .company-description {
-  min-height: 800px;
   background: #F6F6F8;
-  padding-bottom: 100px;
 }
 .company-description .container {
-  margin-top: 100px;
   padding-bottom: 90px;
   border-bottom: 1px solid #E0E0E0;
 }
@@ -173,10 +166,6 @@
   color: #999999;
 }
 
-.container-specialization {
-  min-height: 980px;
-  background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
-}
 .container-specialization .container h2 {
   font-weight: 700;
   font-size: 36px;
@@ -186,11 +175,6 @@
 }
 .container-specialization .container .btn-main {
   margin: 0;
-}
-.container-specialization .bottom {
-  margin-top: 60px;
-  border-bottom: 1px solid #E0E0E0;
-  padding-bottom: 85px;
 }
 .container-specialization .bottom h3 {
   font-weight: 600;
@@ -213,7 +197,6 @@
 }
 
 .projects-container {
-  min-height: 780px;
   background: #F6F6F8;
   text-align: center;
 }
@@ -273,8 +256,6 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  min-height: 300px;
-  margin-top: 85px;
 }
 .video-container .container-bottom h3 {
   font-weight: 600;
@@ -342,12 +323,33 @@ footer .container .col-lg-3 a {
   font-weight: 400;
   line-height: 22px;
   color: #999999;
-  margin-left: 15px;
+}
+footer .container .col-lg-3 .email-logo::before {
+  content: url("../images/envelope.png");
+}
+footer .container .col-lg-3 .tel-logo::before {
+  content: url("../images/Group.png");
+}
+footer .container .col-lg-3 .address-logo::before {
+  content: url("../images/placeholder.png");
+}
+footer .container .col-lg-3 .right-arrow-logo::before {
+  content: url("../images/right-arrow.png");
+  margin-bottom: 5px;
+}
+footer .container .col-lg-3 .logo::before {
+  padding-top: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 576px) {
   .preview-container .title {
     font-size: 20px;
+  }
+  .preview-container nav .navbar-toggler {
+    background: white;
   }
   .description-container .title {
     font-size: 20px;
@@ -355,13 +357,37 @@ footer .container .col-lg-3 a {
   }
   .company-description .container {
     padding: 20px;
+    margin-top: 50px;
   }
   .company-description img {
     width: 340px;
     height: 340px;
   }
+  .container-specialization {
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 65%, #504DC2 65%, #504DC2 100%);
+  }
+  .container-specialization .container {
+    padding: 20px 0;
+  }
+  .container-specialization .container .bottom {
+    border-bottom: 1px solid #E0E0E0;
+  }
   .container-specialization img {
     width: 160px;
+  }
+  .row-container .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects-container {
+    padding-top: 20px;
+  }
+  .projects-container h2 {
+    margin: 0;
+  }
+  .projects-container p {
+    margin: 10px 0;
   }
   .projects-container img {
     margin-bottom: 10px;
@@ -372,34 +398,82 @@ footer .container .col-lg-3 a {
   .video-container .line {
     width: 576px;
   }
-  iframe {
+  .video-container .container-bottom {
+    margin-top: 35px;
+  }
+  .video-container iframe {
     width: 400px;
   }
   footer {
     padding: 20px;
   }
+  footer .container {
+    padding-bottom: 20px;
+  }
+  footer .container .top-side {
+    margin-bottom: 50px;
+  }
   footer h3 {
-    font-size: 10px;
+    font-size: 18px;
     margin-bottom: 15px;
   }
   footer a {
-    font-size: 10px;
+    font-size: 14px;
   }
   footer .text {
     margin-top: 5px;
   }
 }
-@media screen and (min-width: 992px) {
-  .container-specialization img {
-    width: 350px;
-    height: 300px;
+@media screen and (min-width: 768px) {
+  .preview-container nav .navbar-toggler {
+    background: azure;
   }
-  iframe {
-    width: 970px;
-    height: 430px;
+  .container-specialization {
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
+  }
+  .container-specialization img {
+    width: 220px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .company-description {
+    min-height: 800px;
+    padding-bottom: 100px;
+  }
+  .company-description .container {
+    margin-top: 100px;
+  }
+  .company-description .row-container .left-side {
+    align-items: flex-start;
+  }
+  .description-container {
+    margin-bottom: 110px;
+  }
+  .container-specialization {
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
+  }
+  .container-specialization .bottom {
+    margin-top: 85px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 85px;
+  }
+  .container-specialization img {
+    width: 300px;
   }
   .video-container .line {
     min-width: 970px;
+  }
+  .video-container iframe {
+    width: 700px;
+    height: 430px;
+  }
+  .video-container .container-bottom {
+    min-height: 300px;
+    margin-top: 85px;
+  }
+  .projects-container img {
+    width: 220px;
   }
   footer {
     padding-bottom: 30px;
@@ -419,9 +493,14 @@ footer .container .col-lg-3 a {
     margin: 30px 0 0;
   }
 }
-@font-face {
-  font-family: "montserat";
-  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+@media screen and (min-width: 1200px) {
+  .container-specialization {
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
+  }
+  .container-specialization .bottom {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
