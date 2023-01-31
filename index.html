@@ -15,7 +15,39 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-2 col-xl-7 offset-xl-5">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <nav class="disabled-navbar-mobile navbar bg-body-tertiary fixed-top">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#our-projects">Наши проекты</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#services">Услуги</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Новости</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#contacts">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="disabled-navbar navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -44,6 +76,8 @@
             </div>
         </div>
     </div>
+
+
 
     <section class="container-content">
         <p class="pre-title">Передовая IT студия</p>
