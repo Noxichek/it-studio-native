@@ -1,8 +1,10 @@
-$sm-screen: 576px;
+@import "breakpoints";
+@import "font";
 
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   font-family: montserat, serif;
 }
 
@@ -12,14 +14,9 @@ $sm-screen: 576px;
   background-repeat: no-repeat;
   min-height: 900px;
 
-  .dashboard-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100px;
-    border-bottom: 1px solid rgba(161, 161, 161, 0.5);
-
-    .container-menu {
+  nav {
+    background: transparent !important;
+    .container-fluid {
       a {
         display: inline-block;
         color: white;
@@ -28,18 +25,15 @@ $sm-screen: 576px;
         text-align: center;
         transition: border-bottom-color .5s;
         border-bottom: 2px solid transparent;
-        vertical-align: middle;
-        line-height: 100px;
       }
 
       a:hover {
         border-bottom: 2px solid rgb(255, 255, 255);
       }
 
-      .active {
+      .active-link {
         border-bottom: 2px solid rgb(255, 255, 255);
       }
-
     }
   }
 
@@ -79,8 +73,6 @@ $sm-screen: 576px;
 }
 
 .description-container {
-  margin-bottom: 110px;
-
   .title {
     font-size: 36px;
     text-align: center;
@@ -138,12 +130,9 @@ $sm-screen: 576px;
 }
 
 .company-description {
-  min-height: 800px;
   background: #F6F6F8;
-  padding-bottom: 100px;
 
   .container {
-    margin-top: 100px;
     padding-bottom: 90px;
     border-bottom: 1px solid #E0E0E0;;
 
@@ -206,9 +195,6 @@ $sm-screen: 576px;
 }
 
 .container-specialization {
-  min-height: 980px;
-  background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
-
   .container {
     h2 {
       font-weight: 700;
@@ -224,9 +210,6 @@ $sm-screen: 576px;
   }
 
   .bottom {
-    margin-top: 60px;
-    border-bottom: 1px solid #E0E0E0;
-    padding-bottom: 85px;
 
     h3 {
       font-weight: 600;
@@ -254,7 +237,6 @@ $sm-screen: 576px;
 }
 
 .projects-container {
-  min-height: 780px;
   background: #F6F6F8;
   text-align: center;
 
@@ -321,8 +303,6 @@ $sm-screen: 576px;
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    min-height: 300px;
-    margin-top: 85px;
 
     h3 {
       font-weight: 600;
@@ -399,7 +379,30 @@ footer {
         font-weight: 400;
         line-height: 22px;
         color: #999999;
-        margin-left: 15px;
+      }
+
+      .email-logo::before {
+        content: url("../images/envelope.png");
+      }
+
+      .tel-logo::before {
+        content: url("../images/Group.png");
+      }
+
+      .address-logo::before {
+        content: url("../images/placeholder.png");
+      }
+
+      .right-arrow-logo::before {
+        content: url("../images/right-arrow.png");
+        margin-bottom: 5px;
+      }
+
+      .logo::before {
+        padding-top: 2px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
       }
     }
   }
@@ -410,6 +413,11 @@ footer {
       .title {
         font-size: 20px;
       }
+    nav {
+      .navbar-toggler {
+        background: white;
+      }
+    }
   }
 
   .description-container {
@@ -422,6 +430,7 @@ footer {
   .company-description {
     .container {
       padding: 20px;
+      margin-top: 50px;
     }
     img {
       width: 340px;
@@ -430,12 +439,39 @@ footer {
   }
 
   .container-specialization {
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 65%, #504DC2 65%, #504DC2 100%);
+
+    .container {
+      padding: 20px 0;
+
+      .bottom {
+        border-bottom: 1px solid #E0E0E0;
+      }
+    }
+
     img {
       width: 160px;
     }
   }
 
+  .row-container {
+    .left-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   .projects-container {
+    padding-top: 20px;
+
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      margin: 10px 0;
+    }
     img {
       margin-bottom: 10px;
     }
@@ -449,23 +485,36 @@ footer {
     .line {
       width: 576px;
     }
+
+    .container-bottom {
+      margin-top: 35px;
+    }
+
+    iframe {
+      width: 400px;
+    }
   }
 
-  iframe {
-    width: 400px;
-  }
+
 
   footer {
     padding: 20px;
 
+    .container {
+      padding-bottom: 20px;
+
+      .top-side {
+        margin-bottom: 50px;
+      }
+    }
 
     h3 {
-      font-size: 10px;
+      font-size: 18px;
       margin-bottom: 15px;
     }
 
     a {
-      font-size: 10px;
+      font-size: 14px;
     }
 
     .text {
@@ -474,23 +523,79 @@ footer {
   }
 }
 
-@media screen and (min-width: 992px){
+@media  screen and (min-width: $md-screen) {
+    .preview-container {
+      nav {
+        .navbar-toggler {
+          background: azure;
+        }
+      }
+    }
 
-  .container-specialization {
-    img {
-      width: 350px;
-      height: 300px;
+    .container-specialization {
+      background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
+
+      img {
+        width: 220px;
+      }
+    }
+}
+
+@media screen and (min-width: $lg-screen){
+
+  .company-description {
+    min-height: 800px;
+    padding-bottom: 100px;
+
+    .container {
+      margin-top: 100px;
+    }
+
+    .row-container {
+      .left-side {
+        align-items: flex-start;
+      }
     }
   }
 
-  iframe {
-    width: 970px;
-    height: 430px;
+  .description-container {
+    margin-bottom: 110px;
+  }
+
+  .container-specialization {
+    background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
+
+
+    .bottom {
+      margin-top: 85px;
+      margin-bottom: 60px;
+      border-bottom: 1px solid #E0E0E0;
+      padding-bottom: 85px;
+    }
+    img {
+      width: 300px;
+    }
   }
 
   .video-container {
     .line {
       min-width: 970px;
+    }
+
+    iframe {
+      width: 700px;
+      height: 430px;
+    }
+
+    .container-bottom {
+      min-height: 300px;
+      margin-top: 85px;
+    }
+  }
+
+  .projects-container {
+    img {
+      width: 220px;
     }
   }
 
@@ -517,7 +622,14 @@ footer {
   }
 }
 
-@font-face {
-  font-family: 'montserat';
-  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+@media screen and (min-width: $xl-screen) {
+    .container-specialization {
+      background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
+
+      .bottom {
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+    }
 }
+
