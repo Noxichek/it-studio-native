@@ -4,5 +4,9 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 .idea
+/dist
+/node_modules
 vcs.xml
-/styles/*.map
+package.json
+package-lock.json
+/src/styles/*.map

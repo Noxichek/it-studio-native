@@ -1,6 +1,7 @@
 @import "breakpoints";
 @import "font";
 @import "const";
+@import "~bootstrap/scss/bootstrap";
 
 * {
   margin: 0;
@@ -652,6 +653,9 @@ footer {
 @media screen and (min-width: $md-screen) {
   .preview-container {
     min-height: 900px;
+    a {
+      color: black !important;
+    }
 
     .container-content {
       justify-content: center;
@@ -686,18 +690,18 @@ footer {
     display: none !important;
   }
 
-  .navbar {
-    a {
-      color: white !important;
-    }
-  }
-
   .disabled-navbar {
     display: block !important;
   }
 
   .preview-container {
     min-height: 900px;
+
+    .navbar {
+      a {
+        color: white !important;
+      }
+    }
   }
 
   .company-description {
