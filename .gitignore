@@ -5,5 +5,4 @@
 /httpRequests/
 .idea
 vcs.xml
-output.css.map
-/*.map
+/styles/*.map
