@@ -167,7 +167,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 53px;
-  color: #FFFFFF;
+  color: rgb(255, 255, 255);
   width: 540px;
 }
 .container-specialization .container .btn-main {
@@ -224,7 +224,7 @@
   width: 100%;
   min-height: 570px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), no-repeat url("../images/5.png");
-  color: #FFFFFF;
+  color: rgb(255, 255, 255);
 }
 .video-container .container-top .video {
   margin-top: 70px;
@@ -444,7 +444,7 @@ footer .container .col-lg-3 .logo::before {
     height: 340px;
   }
   .container-specialization {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 65%, #504DC2 65%, #504DC2 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 65%, #504DC2 65%, #504DC2 100%);
   }
   .container-specialization .top h2 {
     color: white;
@@ -530,7 +530,7 @@ footer .container .col-lg-3 .logo::before {
     background: azure;
   }
   .container-specialization {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 55%, #504DC2 55%, #504DC2 100%);
   }
   .container-specialization img {
     width: 220px;
@@ -563,7 +563,7 @@ footer .container .col-lg-3 .logo::before {
     margin-bottom: 110px;
   }
   .container-specialization {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, #504DC2 50%, #504DC2 100%);
   }
   .container-specialization .top h2 {
     font-size: 36px;
@@ -632,7 +632,7 @@ footer .container .col-lg-3 .logo::before {
     font-size: 48px;
   }
   .container-specialization {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 55%, #504DC2 55%, #504DC2 100%);
     display: flex;
     flex-direction: column;
     align-items: center;

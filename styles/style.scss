@@ -1,5 +1,6 @@
 @import "breakpoints";
 @import "font";
+@import "const";
 
 * {
   margin: 0;
@@ -27,11 +28,11 @@
       }
 
       a:hover {
-        border-bottom: 2px solid rgb(255, 255, 255);
+        border-bottom: $border-white;
       }
 
       .active-link {
-        border-bottom: 2px solid rgb(255, 255, 255);
+        border-bottom: $border-white;
       }
     }
   }
@@ -41,7 +42,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: $color-white;
 
     .pre-title {
       font-size: 16px;
@@ -61,10 +62,10 @@
   width: 200px;
   min-height: 45px;
   background: #4985FF;
-  box-shadow: 0 0 10px rgba(111, 111, 111, 0.25);
+  box-shadow: $box-shadow;
   border-radius: 30px;
   border: none;
-  color: rgba(255, 255, 255, 1);
+  color: $color-white;
   margin-top: 50px;
   cursor: pointer;
 }
@@ -79,7 +80,7 @@
 
   .description {
     text-align: center;
-    color: #999999;
+    color: $color-gray;
     font-size: 16px;
     margin-bottom: 70px;
   }
@@ -119,7 +120,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 22px;
-        color: #999999;
+        color: $color-gray;
         min-width: 220px;
       }
     }
@@ -127,11 +128,11 @@
 }
 
 .company-description {
-  background: #F6F6F8;
+  background: $background-color-gray;
 
   .container {
     padding-bottom: 90px;
-    border-bottom: 1px solid #E0E0E0;;
+    border-bottom: $border-bottom-gray;
 
     .text {
       display: flex;
@@ -149,7 +150,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 25px;
-        color: #999999;
+        color: $color-gray;
         margin: 0 0 30px 0;
       }
 
@@ -185,7 +186,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 25px;
-        color: #999999;
+        color: $color-gray;
       }
     }
   }
@@ -197,7 +198,7 @@
       font-weight: 700;
       font-size: 36px;
       line-height: 53px;
-      color: #FFFFFF;
+      color: $color-white;
       width: 540px;
     }
 
@@ -223,7 +224,7 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 25px;
-      color: #999999;
+      color: $color-gray;
       margin-top: 30px;
     }
 
@@ -234,7 +235,7 @@
 }
 
 .projects-container {
-  background: #F6F6F8;
+  background: $background-color-gray;
   text-align: center;
 
   h2 {
@@ -248,7 +249,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
-    color: #999999;
+    color: $color-gray;
     margin: 50px 0 70px 0;
   }
 }
@@ -266,7 +267,7 @@
     width: 100%;
     min-height: 570px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), no-repeat url('../images/5.png');
-    color: #FFFFFF;
+    color: $color-white;
 
     .video {
       margin-top: 70px;
@@ -291,7 +292,7 @@
 
   .line {
     height: 85px;
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: $border-bottom-gray;
   }
 
   .container-bottom {
@@ -313,7 +314,7 @@
       font-size: 16px;
       line-height: 25px;
       text-align: center;
-      color: #999999;
+      color: $color-gray;
       margin-top: 20px ;
       margin-bottom: 30px;
     }
@@ -326,7 +327,7 @@
 
       input {
         border: 1px solid #F2F2F2;
-        box-shadow: 0 0 10px rgba(111, 111, 111, 0.25);
+        box-shadow: $box-shadow;
         border-radius: 30px 0 0 30px;
         min-height: 45px;
         padding-left: 30px;
@@ -348,19 +349,19 @@
 }
 
 footer {
-    background: #F6F6F8;
+    background: $background-color-gray;
 
   p {
     font-weight: 400;
     font-size: 13px;
     line-height: 21px;
     text-align: center;
-    color: #999999;
+    color: $color-gray;
     margin: 30px 0 0;
   }
 
   .container {
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: $border-bottom-gray;
 
     .col-lg-3 {
       padding: 0;
@@ -373,7 +374,7 @@ footer {
       a {
         font-weight: 400;
         line-height: 22px;
-        color: #999999;
+        color: $color-gray;
       }
 
       .email-logo::before {
@@ -562,7 +563,7 @@ footer {
   }
 
   .container-specialization {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 65%, #504DC2 65%, #504DC2 100%);
+    background: linear-gradient(to top, $color-white 0%, $color-white 65%, #504DC2 65%, #504DC2 100%);
 
     .top {
       h2 {
@@ -580,7 +581,7 @@ footer {
       padding: 20px 0;
 
       .bottom {
-        border-bottom: 1px solid #E0E0E0;
+        border-bottom: $border-bottom-gray;
       }
     }
 
@@ -683,7 +684,7 @@ footer {
     }
 
     .container-specialization {
-      background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
+      background: linear-gradient(to top, $color-white 0%, $color-white 55%, #504DC2 55%, #504DC2 100%);
 
       img {
         width: 220px;
@@ -733,7 +734,7 @@ footer {
   }
 
   .container-specialization {
-    background: linear-gradient(to top, #ffffff 0%, #ffffff 50%, #504DC2 50%, #504DC2 100%);
+    background: linear-gradient(to top, $color-white 0%, $color-white 50%, #504DC2 50%, #504DC2 100%);
 
     .top {
       h2 {
@@ -750,7 +751,7 @@ footer {
     .bottom {
       margin-top: 85px;
       margin-bottom: 60px;
-      border-bottom: 1px solid #E0E0E0;
+      border-bottom: $border-bottom-gray;
       padding-bottom: 85px;
     }
     img {
@@ -826,7 +827,7 @@ footer {
   }
 
     .container-specialization {
-      background: linear-gradient(to top, #ffffff 0%, #ffffff 55%, #504DC2 55%, #504DC2 100%);
+      background: linear-gradient(to top, $color-white 0%, $color-white 55%, #504DC2 55%, #504DC2 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
