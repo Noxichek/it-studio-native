@@ -374,7 +374,7 @@ footer .container .col-lg-3 .logo::before {
   .disabled-navbar {
     display: none !important;
   }
-  .navbar .container-fluid a {
+  .container-fluid a {
     color: black !important;
   }
   .description-container .btn-main {
